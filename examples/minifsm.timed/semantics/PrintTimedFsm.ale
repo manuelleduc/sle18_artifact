@@ -1,0 +1,11 @@
+behavior tfsmprinting
+
+import ecore "platform:/resource/minifsm.timed/model/TimedMiniFsm.ecore"
+
+import ale fsmprinting
+
+open class TimedTransition {
+	override String print() {
+		return alg.minifsm__Transition(obj).print() + " @ " + obj.time
+	}
+}

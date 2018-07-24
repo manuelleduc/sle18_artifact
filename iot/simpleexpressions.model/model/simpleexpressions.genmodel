@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/simpleexpressions.model/src" modelPluginID="simpleexpressions.model"
+    modelName="Simpleexpressions" rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container"
+    importerID="org.eclipse.emf.importer.ecore" complianceLevel="8.0" copyrightFields="false"
+    operationReflection="true" importOrganizing="true">
+  <foreignModel>simpleexpressions.ecore</foreignModel>
+  <genPackages prefix="Simpleexpressions" disposableProviderFactory="true" ecorePackage="simpleexpressions.ecore#/">
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="simpleexpressions.ecore#//SEIntegerCalculationOperator">
+      <genEnumLiterals ecoreEnumLiteral="simpleexpressions.ecore#//SEIntegerCalculationOperator/ADD"/>
+      <genEnumLiterals ecoreEnumLiteral="simpleexpressions.ecore#//SEIntegerCalculationOperator/SUBRACT"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="simpleexpressions.ecore#//SEIntegerComparisonOperator">
+      <genEnumLiterals ecoreEnumLiteral="simpleexpressions.ecore#//SEIntegerComparisonOperator/SMALLER"/>
+      <genEnumLiterals ecoreEnumLiteral="simpleexpressions.ecore#//SEIntegerComparisonOperator/SMALLER_EQUALS"/>
+      <genEnumLiterals ecoreEnumLiteral="simpleexpressions.ecore#//SEIntegerComparisonOperator/EQUALS"/>
+      <genEnumLiterals ecoreEnumLiteral="simpleexpressions.ecore#//SEIntegerComparisonOperator/GREATER_EQUALS"/>
+      <genEnumLiterals ecoreEnumLiteral="simpleexpressions.ecore#//SEIntegerComparisonOperator/GREATER"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="simpleexpressions.ecore#//SEBooleanUnaryOperator">
+      <genEnumLiterals ecoreEnumLiteral="simpleexpressions.ecore#//SEBooleanUnaryOperator/NOT"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="simpleexpressions.ecore#//SEBooleanBinaryOperator">
+      <genEnumLiterals ecoreEnumLiteral="simpleexpressions.ecore#//SEBooleanBinaryOperator/AND"/>
+      <genEnumLiterals ecoreEnumLiteral="simpleexpressions.ecore#//SEBooleanBinaryOperator/OR"/>
+    </genEnums>
+    <genClasses image="false" ecoreClass="simpleexpressions.ecore#//SEIntegerExpression">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference simpleexpressions.ecore#//SEIntegerExpression/operand2"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference simpleexpressions.ecore#//SEIntegerExpression/operand1"/>
+    </genClasses>
+    <genClasses ecoreClass="simpleexpressions.ecore#//SEIntegerCalculationExpression">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference simpleexpressions.ecore#//SEIntegerCalculationExpression/assignee"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute simpleexpressions.ecore#//SEIntegerCalculationExpression/operator"/>
+    </genClasses>
+    <genClasses ecoreClass="simpleexpressions.ecore#//SEIntegerComparisonExpression">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference simpleexpressions.ecore#//SEIntegerComparisonExpression/assignee"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute simpleexpressions.ecore#//SEIntegerComparisonExpression/operator"/>
+    </genClasses>
+    <genClasses ecoreClass="simpleexpressions.ecore#//SEBooleanValue">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute simpleexpressions.ecore#//SEBooleanValue/value"/>
+    </genClasses>
+    <genClasses ecoreClass="simpleexpressions.ecore#//SEIntegerValue">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute simpleexpressions.ecore#//SEIntegerValue/value"/>
+    </genClasses>
+    <genClasses ecoreClass="simpleexpressions.ecore#//SEBooleanBinaryExpression">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference simpleexpressions.ecore#//SEBooleanBinaryExpression/operand1"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference simpleexpressions.ecore#//SEBooleanBinaryExpression/operand2"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute simpleexpressions.ecore#//SEBooleanBinaryExpression/operator"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="simpleexpressions.ecore#//SEValue"/>
+    <genClasses ecoreClass="simpleexpressions.ecore#//SEBooleanVariable"/>
+    <genClasses image="false" ecoreClass="simpleexpressions.ecore#//SEExpression"/>
+    <genClasses ecoreClass="simpleexpressions.ecore#//SEIntegerVariable"/>
+    <genClasses ecoreClass="simpleexpressions.ecore#//SEBooleanUnaryExpression">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference simpleexpressions.ecore#//SEBooleanUnaryExpression/operand"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute simpleexpressions.ecore#//SEBooleanUnaryExpression/operator"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="simpleexpressions.ecore#//SEBooleanExpression">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference simpleexpressions.ecore#//SEBooleanExpression/assignee"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="simpleexpressions.ecore#//SEVariable">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference simpleexpressions.ecore#//SEVariable/currentValue"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute simpleexpressions.ecore#//SEVariable/name"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference simpleexpressions.ecore#//SEVariable/initialValue"/>
+    </genClasses>
+  </genPackages>
+</genmodel:GenModel>

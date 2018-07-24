@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<site>
+   <feature url="features/ale.feature_1.0.1.qualifier.jar" id="ale.feature" version="1.0.1.qualifier">
+      <category name="ALEX"/>
+   </feature>
+   <category-def name="ALEX" label="ALEX">
+      <description>
+         Alex Tools
+      </description>
+   </category-def>
+</site>

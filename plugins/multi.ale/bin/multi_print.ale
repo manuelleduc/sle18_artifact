@@ -1,0 +1,25 @@
+behavior multi_print
+
+import ecore "platform:/resource/multi/model/multi.ecore"
+
+open class A {
+	def String fromA() {
+		'a'
+	}
+}
+
+open class B {
+	def Long fromB() {
+		42L
+	}
+}
+
+open class C {
+	override String fromA() {
+		'c'
+	}
+	
+	override Long fromB() {
+		55L
+	}
+}
