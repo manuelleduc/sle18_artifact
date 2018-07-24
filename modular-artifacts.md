@@ -12,11 +12,11 @@ Alex is tightly integrated with the Eclipse Modeling Framework (EMF) and relies 
 
 Alex is bundled a set of Eclipse plug-ins.
 
-In the current artifact,  We evaluate Alex in the development of a new DSL for IoT systems modeling resulting from the composition of three independently defined languages (UML activity diagrams, Lua, and the CORBA Interface Description Language).
+In the current artifact,  we evaluate Alex in the development of a new DSL for IoT systems modeling resulting from the composition of three independently defined languages (UML activity diagrams, Lua, and the CORBA Interface Description Language).
 
 ## Artifacts
 
-The following table lists exhaustively the files and directories of the artifact is located in `./listing.md`
+The following table lists exhaustively the files and directories of the artifact is located in `./listing.md`.
 
 ## Requirements
 
@@ -27,8 +27,7 @@ The following table lists exhaustively the files and directories of the artifact
 
 ### Installing Alex
 
-Once eclipse started, `Help -> Install new Software...`.
-Then, click on `Add...`, then `Archive...` and select the **archive.zip** file locate at the root of the artifacts directory.
+Once eclipse started, `Help -> Install new Software...`, click on `Add...`, then `Archive...` and select the **archive.zip** file locate at the root of the artifacts directory.
 Finally, select the **Alex Feature** entry and follow the usual eclipse installation steps.
 Once Eclipse restarted, the Alex plugin is installed.
 
@@ -36,7 +35,23 @@ Once Eclipse restarted, the Alex plugin is installed.
 
 #### Tutorials
 
+The tutorials presented in the section are not strictly related to the evaluation use case, but are simpler examples aimed at easing the understanding of Alex.
+
+TODO
+
 #### Use Cases
+
+##### Iot Lua language
+
+TODO
+
+##### Iot + Simple Expression usecase
+
+TODO
+
+##### Conclusion
+
+Many eclipse plugins are reuse across both implementations. TODO
 
 ### Building Alex
 
