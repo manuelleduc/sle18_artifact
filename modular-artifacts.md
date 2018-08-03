@@ -69,3 +69,17 @@ One the triggered eclipse tasks finished, the projects opened in the workspace a
 
 - Open the `site.xml` file in the `ale.p2updatesite` project then click on `Build All`.
 - Create an zip archive with the `features` directory, the `plugins` directory, `artifacts.jar`, and `content.jar`.
+
+# Know issues
+
+While the issues below are not cause by our implementation but by the current status of the eclipse ecosystem, we preferred to propose solution to fixe them.
+
+## EGit runtime error
+
+In case the error below is showing up in the Console where running the examples, please install the latest egit version available at  http://download.eclipse.org/egit/updates/ and install the *Git integration for Eclipse* feature.
+
+````text
+java.lang.ClassNotFoundException: org.eclipse.jgit.lfs.BuiltinLFS cannot be found by org.eclipse.egit.core_5.0.0.201806131550-r
+````
+
+Once eclipse restarted, the error should not be displayed anymore, improving the readability of the 
