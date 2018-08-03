@@ -1,0 +1,4 @@
+eclipse-dsl-photon-R-win32-x86_64/
+*._trace
+*.xtendbin
+bin/
