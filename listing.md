@@ -5,6 +5,7 @@ This document exhaustively lists the files and directory of the submitted for th
 | Path                                          | Description                                                  |
 | --------------------------------------------- | ------------------------------------------------------------ |
 | /archive.zip                                  | Alex Eclipse Plug-in archive.                                |
+| /dependencies.svg                             | IoT usecase dependencies graph.                              |
 | /examples/                                    | Examples directory.                                          |
 | /examples/boolexp/                            | Boolean expressions example.                                 |
 | /examples/guardedfsm/                         | Guarded Finite State Machine example.                        |
@@ -35,7 +36,7 @@ This document exhaustively lists the files and directory of the submitted for th
 | /iot/simpleexpressions.model/                 | Simple Expression language concern syntax.                   |
 | /iot/simpleexpressions.semantics/             | Simple Expression language concern semantics.                |
 | /listing.md                                   | Artifacts listing.                                           |
-| /README.md                         | This file.                                                   |
+| /README.md                                    | This file.                                                   |
 | /plugins/                                     | Alex Plug-ins directory.                                     |
 | /plugins/ale.feature/                         | Alex Features project.                                       |
 | /plugins/ale.p2updatesite/                    | Alex Eclipse update site project.                            |
