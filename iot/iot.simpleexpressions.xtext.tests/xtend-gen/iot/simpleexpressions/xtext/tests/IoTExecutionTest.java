@@ -42,21 +42,4 @@ public class IoTExecutionTest {
       throw Exceptions.sneakyThrow(_e);
     }
   }
-  
-  @Test
-  public void loadModelMergeFork() {
-    try {
-      final ResourceSet rs = this.rsp.get();
-      final Resource r = rs.getResource(URI.createURI("merge_fork.iot"), true);
-      r.load(null);
-      EObject _head = IterableExtensions.<EObject>head(r.getContents());
-      final iot.System s = ((iot.System) _head);
-      final Iot_simpleexpression_execRevisitor rev = new Iot_simpleexpression_execRevisitor() {
-      };
-      final IotActivityOperation o = rev.$(s.getSketch().getActivity());
-      o.main();
-    } catch (Throwable _e) {
-      throw Exceptions.sneakyThrow(_e);
-    }
-  }
 }

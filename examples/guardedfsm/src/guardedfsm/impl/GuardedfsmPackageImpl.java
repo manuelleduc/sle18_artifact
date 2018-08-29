@@ -3,8 +3,6 @@
 package guardedfsm.impl;
 
 import boolexp.BoolexpPackage;
-
-import boolexp.impl.BoolexpPackageImpl;
 import guardedfsm.Guarded;
 import guardedfsm.GuardedfsmFactory;
 import guardedfsm.GuardedfsmPackage;
@@ -79,19 +77,14 @@ public class GuardedfsmPackageImpl extends EPackageImpl implements GuardedfsmPac
 		isInited = true;
 
 		// Initialize simple dependencies
+		BoolexpPackage.eINSTANCE.eClass();
 		MinifsmPackage.eINSTANCE.eClass();
-
-		// Obtain or create and register interdependencies
-		Object registeredPackage = EPackage.Registry.INSTANCE.getEPackage(BoolexpPackage.eNS_URI);
-		BoolexpPackageImpl theBoolexpPackage = (BoolexpPackageImpl)(registeredPackage instanceof BoolexpPackageImpl ? registeredPackage : BoolexpPackage.eINSTANCE);
 
 		// Create package meta-data objects
 		theGuardedfsmPackage.createPackageContents();
-		theBoolexpPackage.createPackageContents();
 
 		// Initialize created meta-data
 		theGuardedfsmPackage.initializePackageContents();
-		theBoolexpPackage.initializePackageContents();
 
 		// Mark meta-data to indicate it can't be changed
 		theGuardedfsmPackage.freeze();

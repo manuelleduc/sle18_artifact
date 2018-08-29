@@ -6,14 +6,13 @@ package iot.simpleexpressions.xtext.tests
 import com.google.inject.Inject
 import com.google.inject.Provider
 import iot.System
+import iot_simpleexpression_exec.revisitor.impl.Iot_simpleexpression_execRevisitor
 import org.eclipse.emf.common.util.URI
 import org.eclipse.emf.ecore.resource.ResourceSet
 import org.eclipse.xtext.testing.InjectWith
 import org.eclipse.xtext.testing.XtextRunner
-import org.eclipse.xtext.testing.util.ParseHelper
 import org.junit.Test
 import org.junit.runner.RunWith
-import org.junit.Assert
 
 @RunWith(XtextRunner)
 @InjectWith(IoTInjectorProvider)
@@ -30,22 +29,7 @@ class IoTExecutionTest {
 
 		val s = r.contents.head as System
 
-		val rev = new  iot_simpleexpression_exec.revisitor.impl.Iot_simpleexpression_execRevisitor() {
-		}
-		val o = rev.$(s.sketch.activity)
-		o.main()
-	}
-	
-	@Test
-	def void loadModelMergeFork() {
-
-		val rs = rsp.get
-		val r = rs.getResource(URI.createURI("merge_fork.iot"), true)
-		r.load(null)
-
-		val s = r.contents.head as System
-
-		val rev = new  iot_simpleexpression_exec.revisitor.impl.Iot_simpleexpression_execRevisitor() {
+		val rev = new  Iot_simpleexpression_execRevisitor() {
 		}
 		val o = rev.$(s.sketch.activity)
 		o.main()

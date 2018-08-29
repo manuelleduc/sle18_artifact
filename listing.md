@@ -35,7 +35,7 @@ This document exhaustively lists the files and directory of the submitted for th
 | /iot/simpleexpressions.model/                 | Simple Expression language concern syntax.                   |
 | /iot/simpleexpressions.semantics/             | Simple Expression language concern semantics.                |
 | /listing.md                                   | Artifacts listing.                                           |
-| /modular-artifacts.md                         | This file.                                                   |
+| /README.md                         | This file.                                                   |
 | /plugins/                                     | Alex Plug-ins directory.                                     |
 | /plugins/ale.feature/                         | Alex Features project.                                       |
 | /plugins/ale.p2updatesite/                    | Alex Eclipse update site project.                            |

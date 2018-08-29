@@ -1,7 +1,7 @@
 package guardedfsmprinting.revisitor.operations.guardedfsmprinting;
 
-import guardedfsmprinting.revisitor.operations.guardedfsmprinting.ExpOperation;
+import printexp.revisitor.operations.printexp.ExpOperation;
 
 @SuppressWarnings("all")
-public interface LitOperation extends printexp.revisitor.operations.printexp.LitOperation, ExpOperation, printexp.revisitor.operations.printexp.ExpOperation {
+public interface LitOperation extends printexp.revisitor.operations.printexp.LitOperation, ExpOperation, guardedfsmprinting.revisitor.operations.guardedfsmprinting.ExpOperation {
 }

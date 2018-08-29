@@ -4,6 +4,7 @@ package boolexp.impl;
 
 import boolexp.BoolexpPackage;
 import boolexp.Lit;
+
 import org.eclipse.emf.ecore.EClass;
 
 /**

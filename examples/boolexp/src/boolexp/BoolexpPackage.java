@@ -249,7 +249,6 @@ public interface BoolexpPackage extends EPackage {
 	 */
 	int OR_OPERATION_COUNT = BINARY_EXP_OPERATION_COUNT + 0;
 
-
 	/**
 	 * The meta object id for the '{@link boolexp.impl.TruImpl <em>Tru</em>}' class.
 	 * <!-- begin-user-doc -->
@@ -305,6 +304,7 @@ public interface BoolexpPackage extends EPackage {
 	 * @ordered
 	 */
 	int FALS_OPERATION_COUNT = LIT_OPERATION_COUNT + 0;
+
 
 	/**
 	 * Returns the meta object for class '{@link boolexp.Exp <em>Exp</em>}'.

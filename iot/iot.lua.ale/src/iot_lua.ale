@@ -73,7 +73,7 @@ open class IntegerVariableBindStatement_Assignment {
 		obj.currentValue = ActivitydiagramFactory.eINSTANCE.createIntegerValue => [ value = e.getVariable(alg.$(obj).name()) as Double ]
 	}
 	override String print() {
-		'TODO'
+		''
 	}
 	override String name() {
 		((obj.delegate as Statement_Assignment).variable.get(0) as Expression_VariableName).variable

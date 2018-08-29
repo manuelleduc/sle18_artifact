@@ -10,8 +10,8 @@ import boolexp.Exp;
 import boolexp.Fals;
 import boolexp.Lit;
 import boolexp.Or;
-
 import boolexp.Tru;
+
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EReference;

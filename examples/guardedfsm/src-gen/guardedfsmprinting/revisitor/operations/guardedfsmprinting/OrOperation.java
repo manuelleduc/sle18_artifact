@@ -1,8 +1,8 @@
 package guardedfsmprinting.revisitor.operations.guardedfsmprinting;
 
-import guardedfsmprinting.revisitor.operations.guardedfsmprinting.BinaryExpOperation;
-import guardedfsmprinting.revisitor.operations.guardedfsmprinting.ExpOperation;
+import printexp.revisitor.operations.printexp.BinaryExpOperation;
+import printexp.revisitor.operations.printexp.ExpOperation;
 
 @SuppressWarnings("all")
-public interface OrOperation extends printexp.revisitor.operations.printexp.OrOperation, BinaryExpOperation, printexp.revisitor.operations.printexp.BinaryExpOperation, ExpOperation, printexp.revisitor.operations.printexp.ExpOperation {
+public interface OrOperation extends printexp.revisitor.operations.printexp.OrOperation, BinaryExpOperation, guardedfsmprinting.revisitor.operations.guardedfsmprinting.BinaryExpOperation, ExpOperation, guardedfsmprinting.revisitor.operations.guardedfsmprinting.ExpOperation {
 }

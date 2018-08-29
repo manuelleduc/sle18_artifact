@@ -5,12 +5,12 @@
     complianceLevel="8.0" copyrightFields="false" operationReflection="true" importOrganizing="true">
   <foreignModel>BoolExp.ecore</foreignModel>
   <genPackages prefix="Boolexp" disposableProviderFactory="true" ecorePackage="BoolExp.ecore#/">
-    <genClasses ecoreClass="BoolExp.ecore#//Exp"/>
-    <genClasses ecoreClass="BoolExp.ecore#//BinaryExp">
+    <genClasses image="false" ecoreClass="BoolExp.ecore#//Exp"/>
+    <genClasses image="false" ecoreClass="BoolExp.ecore#//BinaryExp">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference BoolExp.ecore#//BinaryExp/lhs"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference BoolExp.ecore#//BinaryExp/rhs"/>
     </genClasses>
-    <genClasses ecoreClass="BoolExp.ecore#//Lit"/>
+    <genClasses image="false" ecoreClass="BoolExp.ecore#//Lit"/>
     <genClasses ecoreClass="BoolExp.ecore#//And"/>
     <genClasses ecoreClass="BoolExp.ecore#//Or"/>
     <genClasses ecoreClass="BoolExp.ecore#//Tru"/>
