@@ -21,7 +21,7 @@ A table listing all the files and directories of the artifact exhaustively is lo
 ## Requirements
 
 - [JDK 1.8](http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html);
-- Eclipse Photon ([4.8.0](https://www.eclipse.org/downloads/packages/eclipse-ide-java-and-dsl-developers/photonr)) + EcoreTools ([3.2.0](http://download.eclipse.org/ecoretools/updates/releases/3.2.0/neon)).
+- Eclipse Photon for DSL developers ([4.8.0](https://www.eclipse.org/downloads/packages/eclipse-ide-java-and-dsl-developers/photonr)) + EcoreTools ([3.2.0](http://download.eclipse.org/ecoretools/updates/releases/3.2.0/neon)).
 
 ## Instructions
 
@@ -49,11 +49,9 @@ Each project contains a `Main.java` class which executes a small program.
 
 ###### Languages descriptions
 
-The `boolexp` and `minifsm` examples are standalone languages, respectively showing a boolean expressions language and a minimal Finite State Machine language.
-
-The `minifsm.timed` example extends the `minifsm` with the notion of time.
-
-The `guardedfsm` language reuses both the `boolexp` and `minifsm` languages to define a Finite State Machine language with boolean guards on transitions.
+* The `boolexp` and `minifsm` examples are standalone languages, respectively showing a boolean expressions language and a minimal Finite State Machine language.
+* The `minifsm.timed` example extends the `minifsm` with the notion of time.
+* The `guardedfsm` language reuses both the `boolexp` and `minifsm` languages to define a Finite State Machine language with boolean guards on transitions.
 
 ![](./examples/dependencies.svg)
 
@@ -61,11 +59,11 @@ The `guardedfsm` language reuses both the `boolexp` and `minifsm` languages to d
 
 #### Use Cases
 
-This section describes the implementation of the languages presented in section 5 of the paper.
+This section describes the implementation of the languages presented in Section 5 of the paper.
 
-##### Iot Lua Language
+##### IoT Lua Language
 
-The IoT Language is build by composing the IoT Language concern with and Activity Diagram, IDL and Lua language concerns.
+The IoT Language is build by composing the IoT Language concern with an Activity Diagram, IDL and Lua language concerns.
 
 `./iot/iot.lua.model/model/iot_lua.ecore` composes the language concerns abstract syntaxes to form the IoT Lua abstract syntax.
 
@@ -73,17 +71,17 @@ The IoT Language is build by composing the IoT Language concern with and Activit
 
 For instance,  `ExpressionBindStatement` creates a new Lua environment, complete it with the Activity Diagram context and calls the delegated statement execute method.
 
-Finally it reports back the updates of the environments by the execute call to the Activity Diagram context.
+Finally, it reports back the updates of the environments by the execute call to the Activity Diagram context.
 
-##### Iot Simple Expressions Language
+##### IoT Simple Expression Language
 
 The IoT Simple Expression Language follows the same composition methodology, but using two smaller languages instead of Lua.
 
 ##### Running the languages
 
-Both languages proposed the execution of a illustrating usecase, in the form of a simulated IoT system which keeps track of the temperature and light of an environment.
+Both languages execute an illustrating use case: a simulated IoT system which keeps track of the temperature and luminosity of an environment.
 
-The same program is runned for each language, but they are parsed by different Xtext grammar before being executed with their respective semantics.
+The same program is run for each language, but they are parsed by different Xtext grammar before being executed with their respective semantics.
 
 The execution is done by running the unit test of the test classes (Right click `Run as → JUnit Plug-in Test`):
 
