@@ -31,7 +31,7 @@ Workflow {
 		}
 		language = StandardLanguage {
 			name = "iot.simpleexpressions.xtext.IoT"
-			fileExtensions = "iot"
+			fileExtensions = "iot_se"
 			referencedResource = "platform:/resource/iot.model/model/iot.genmodel"
 			referencedResource = "platform:/resource/org.csu.idl.idlmm/model/IDLMM.genmodel"
 			referencedResource = "platform:/resource/SimpleALEnv/model/simpleALEnv.genmodel"

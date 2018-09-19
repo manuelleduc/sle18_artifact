@@ -7,7 +7,7 @@
 			class="iot.simpleexpressions.xtext.ui.IoTExecutableExtensionFactory:org.eclipse.xtext.ui.editor.XtextEditor"
 			contributorClass="org.eclipse.ui.editors.text.TextEditorActionContributor"
 			default="true"
-			extensions="iot"
+			extensions="iot_se"
 			id="iot.simpleexpressions.xtext.IoT"
 			name="IoT Editor">
 		</editor>
@@ -80,7 +80,7 @@
 		<page
 			class="iot.simpleexpressions.xtext.ui.IoTExecutableExtensionFactory:org.eclipse.xtext.ui.editor.preferences.LanguageRootPreferencePage"
 			id="iot.simpleexpressions.xtext.IoT"
-			name="IoT">
+			name="iot_se">
 			<keywordReference id="iot.simpleexpressions.xtext.ui.keyword_IoT"/>
 		</page>
 		<page
@@ -103,7 +103,7 @@
 		<page
 			class="iot.simpleexpressions.xtext.ui.IoTExecutableExtensionFactory:org.eclipse.xtext.ui.editor.preferences.LanguageRootPreferencePage"
 			id="iot.simpleexpressions.xtext.IoT"
-			name="IoT">
+			name="iot_se">
 			<keywordReference id="iot.simpleexpressions.xtext.ui.keyword_IoT"/>
 			<enabledWhen>
 				<adapt type="org.eclipse.core.resources.IProject"/>
@@ -115,7 +115,7 @@
 		point="org.eclipse.ui.keywords">
 		<keyword
 			id="iot.simpleexpressions.xtext.ui.keyword_IoT"
-			label="IoT"/>
+			label="iot_se"/>
 	</extension>
 	<extension
 		point="org.eclipse.ui.commands">
@@ -209,13 +209,13 @@
 		point="org.eclipse.emf.ecore.extension_parser">
 		<parser
 			class="iot.simpleexpressions.xtext.ui.IoTExecutableExtensionFactory:org.eclipse.xtext.resource.IResourceFactory"
-			type="iot">
+			type="iot_se">
 		</parser>
 	</extension>
 	<extension point="org.eclipse.xtext.extension_resourceServiceProvider">
 		<resourceServiceProvider
 			class="iot.simpleexpressions.xtext.ui.IoTExecutableExtensionFactory:org.eclipse.xtext.ui.resource.IResourceUIServiceProvider"
-			uriExtension="iot">
+			uriExtension="iot_se">
 		</resourceServiceProvider>
 	</extension>
 	<!-- marker definitions for iot.simpleexpressions.xtext.IoT -->
@@ -243,7 +243,7 @@
 	<extension point="org.eclipse.xtext.builder.participant">
 		<participant
 			class="iot.simpleexpressions.xtext.ui.IoTExecutableExtensionFactory:org.eclipse.xtext.builder.IXtextBuilderParticipant"
-			fileExtensions="iot"/>
+			fileExtensions="iot_se"/>
 	</extension>
 	<extension point="org.eclipse.ui.preferencePages">
 		<page
@@ -386,24 +386,24 @@
 	<extension point="org.eclipse.compare.contentViewers">
 		<viewer id="iot.simpleexpressions.xtext.IoT.compare.contentViewers"
 			class="iot.simpleexpressions.xtext.ui.IoTExecutableExtensionFactory:org.eclipse.xtext.ui.compare.InjectableViewerCreator"
-			extensions="iot">
+			extensions="iot_se">
 		</viewer>
 	</extension>
 	<extension point="org.eclipse.compare.contentMergeViewers">
 		<viewer id="iot.simpleexpressions.xtext.IoT.compare.contentMergeViewers"
 			class="iot.simpleexpressions.xtext.ui.IoTExecutableExtensionFactory:org.eclipse.xtext.ui.compare.InjectableViewerCreator"
-			extensions="iot" label="IoT Compare">
+			extensions="iot_se" label="IoT Compare">
 		</viewer>
 	</extension>
 	<extension point="org.eclipse.ui.editors.documentProviders">
 		<provider id="iot.simpleexpressions.xtext.IoT.editors.documentProviders"
 			class="iot.simpleexpressions.xtext.ui.IoTExecutableExtensionFactory:org.eclipse.xtext.ui.editor.model.XtextDocumentProvider"
-			extensions="iot">
+			extensions="iot_se">
 		</provider>
 	</extension>
 	<extension point="org.eclipse.team.core.fileTypes">
 		<fileTypes
-			extension="iot"
+			extension="iot_se"
 			type="text">
 		</fileTypes>
 	</extension>

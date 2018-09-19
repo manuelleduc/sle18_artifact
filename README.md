@@ -104,6 +104,34 @@ assign temp = 19
 [...]
 ```
 
+##### Testing the IoT Languages
+
+- From the current eclipse instance, start a new eclipse: `Run → Run configurations...`
+- On the run configuration window: `Right click on "Eclipse Application" on the left pane → New Configuration` then click Run at the bottom right.
+- On the newly started eclipse, create a new project.
+- Create a file with the `.iot_lua` or `.iot_se` extension, click yes when a pop-up asks for the conversion to Xtext project.
+  - You can either start from the minimal example provided below (compatible with `.iot_lua` and `.iot_se`) or by copying `/iot/iot.lua.xtext.tests/usecase.iot_lua` or `/iot/iot.simpleexpressions.xtext.tests/usecase.iot_se`
+
+```
+system MySystem {
+	sketch {
+		activity Test {
+			nodes {
+				initial i out (e0),
+				final f in (e0)
+			}
+			edges {
+				flow e0 from i to f
+			}
+		}
+	}
+}
+```
+
+
+
+**Note:** Testing the execution has not been integrated but the test proposed in `/iot/iot.lua.xtext.tests` and `/iot/iot.simpleexpressions.xtext.tests` can help to do it programmatically.
+
 ##### Conclusion
 
 ![](./dependencies.svg)
@@ -152,4 +180,3 @@ java.lang.ClassNotFoundException: org.eclipse.jgit.lfs.BuiltinLFS cannot be foun
 	at org.eclipse.osgi.internal.loader.BundleLoader.findClass(BundleLoader.java:419)
 	at org.eclipse.osgi.internal.loader.BundleLoader.findClass(BundleLoader.java:411)
 ```
-

@@ -48,7 +48,7 @@ open abstract class Stmt {
 
 open class Print {
 	override void eval(Env env) {
-		println(env.get(obj.name))
+		println(obj.name)
 	}
 }
 

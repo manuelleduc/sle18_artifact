@@ -7,7 +7,7 @@
 			class="iot.lua.xtext.ui.IotLuaXtextExecutableExtensionFactory:org.eclipse.xtext.ui.editor.XtextEditor"
 			contributorClass="org.eclipse.ui.editors.text.TextEditorActionContributor"
 			default="true"
-			extensions="iot"
+			extensions="iot_lua"
 			id="iot.lua.xtext.IotLuaXtext"
 			name="IotLuaXtext Editor">
 		</editor>
@@ -209,13 +209,13 @@
 		point="org.eclipse.emf.ecore.extension_parser">
 		<parser
 			class="iot.lua.xtext.ui.IotLuaXtextExecutableExtensionFactory:org.eclipse.xtext.resource.IResourceFactory"
-			type="iot">
+			type="iot_lua">
 		</parser>
 	</extension>
 	<extension point="org.eclipse.xtext.extension_resourceServiceProvider">
 		<resourceServiceProvider
 			class="iot.lua.xtext.ui.IotLuaXtextExecutableExtensionFactory:org.eclipse.xtext.ui.resource.IResourceUIServiceProvider"
-			uriExtension="iot">
+			uriExtension="iot_lua">
 		</resourceServiceProvider>
 	</extension>
 	<!-- marker definitions for iot.lua.xtext.IotLuaXtext -->
@@ -243,7 +243,7 @@
 	<extension point="org.eclipse.xtext.builder.participant">
 		<participant
 			class="iot.lua.xtext.ui.IotLuaXtextExecutableExtensionFactory:org.eclipse.xtext.builder.IXtextBuilderParticipant"
-			fileExtensions="iot"/>
+			fileExtensions="iot_lua"/>
 	</extension>
 	<extension point="org.eclipse.ui.preferencePages">
 		<page
@@ -326,7 +326,7 @@
 			point="org.eclipse.ui.ide.markerResolution">
 		<markerResolutionGenerator
 			class="iot.lua.xtext.ui.IotLuaXtextExecutableExtensionFactory:org.eclipse.xtext.ui.editor.quickfix.MarkerResolutionGenerator"
-			markerType="iot.lua.xtex.ui.iotluaxtext.check.fast">
+			markerType="iot.lua.xtext.ui.iotluaxtext.check.fast">
 			<attribute
 				name="FIXABLE_KEY"
 				value="true">
@@ -334,7 +334,7 @@
 		</markerResolutionGenerator>
 		<markerResolutionGenerator
 			class="iot.lua.xtext.ui.IotLuaXtextExecutableExtensionFactory:org.eclipse.xtext.ui.editor.quickfix.MarkerResolutionGenerator"
-			markerType="iot.lua.xtex.ui.iotluaxtext.check.normal">
+			markerType="iot.lua.xtext.ui.iotluaxtext.check.normal">
 			<attribute
 				name="FIXABLE_KEY"
 				value="true">
@@ -342,7 +342,7 @@
 		</markerResolutionGenerator>
 		<markerResolutionGenerator
 			class="iot.lua.xtext.ui.IotLuaXtextExecutableExtensionFactory:org.eclipse.xtext.ui.editor.quickfix.MarkerResolutionGenerator"
-			markerType="iot.lua.xtex.ui.iotluaxtext.check.expensive">
+			markerType="iot.lua.xtext.ui.iotluaxtext.check.expensive">
 			<attribute
 				name="FIXABLE_KEY"
 				value="true">
@@ -386,24 +386,24 @@
 	<extension point="org.eclipse.compare.contentViewers">
 		<viewer id="iot.lua.xtext.IotLuaXtext.compare.contentViewers"
 			class="iot.lua.xtext.ui.IotLuaXtextExecutableExtensionFactory:org.eclipse.xtext.ui.compare.InjectableViewerCreator"
-			extensions="iot">
+			extensions="iot_lua">
 		</viewer>
 	</extension>
 	<extension point="org.eclipse.compare.contentMergeViewers">
 		<viewer id="iot.lua.xtext.IotLuaXtext.compare.contentMergeViewers"
 			class="iot.lua.xtext.ui.IotLuaXtextExecutableExtensionFactory:org.eclipse.xtext.ui.compare.InjectableViewerCreator"
-			extensions="iot" label="IotLuaXtext Compare">
+			extensions="iot_lua" label="IotLuaXtext Compare">
 		</viewer>
 	</extension>
 	<extension point="org.eclipse.ui.editors.documentProviders">
 		<provider id="iot.lua.xtext.IotLuaXtext.editors.documentProviders"
 			class="iot.lua.xtext.ui.IotLuaXtextExecutableExtensionFactory:org.eclipse.xtext.ui.editor.model.XtextDocumentProvider"
-			extensions="iot">
+			extensions="iot_lua">
 		</provider>
 	</extension>
 	<extension point="org.eclipse.team.core.fileTypes">
 		<fileTypes
-			extension="iot"
+			extension="iot_lua"
 			type="text">
 		</fileTypes>
 	</extension>

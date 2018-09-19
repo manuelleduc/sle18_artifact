@@ -1,6 +1,6 @@
 Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
-Bundle-Name: iot.lua.xtex.ui
+Bundle-Name: iot.lua.xtext.ui
 Bundle-Vendor: My Company
 Bundle-Version: 1.0.0.qualifier
 Bundle-SymbolicName: iot.lua.xtext.ui;singleton:=true
@@ -21,10 +21,11 @@ Require-Bundle: iot.lua.xtext,
  org.eclipse.compare,
  org.eclipse.xtext.builder,
  org.eclipse.xtend.lib;resolution:=optional,
- org.eclipse.xtext.xbase.lib
+ org.eclipse.xtext.xbase.lib;bundle-version="2.14.0"
 Import-Package: org.apache.log4j
 Bundle-RequiredExecutionEnvironment: JavaSE-1.8
-Export-Package: iot.lua.xtext.ui.contentassist,
- iot.lua.xtex.ui.internal,
+Export-Package: iot.lua.xtext.ui,
+ iot.lua.xtext.ui.contentassist,
+ iot.lua.xtext.ui.internal,
  iot.lua.xtext.ui.quickfix
-Bundle-Activator: iot.lua.xtex.ui.internal.XtexActivator
+Bundle-Activator: iot.lua.xtext.ui.internal.XtextActivator

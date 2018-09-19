@@ -10,7 +10,7 @@ Workflow {
 	component = XtextGenerator {
 		configuration = {
 			project = StandardProjectConfig {
-				baseName = "iot.lua.xtex"
+				baseName = "iot.lua.xtext"
 				rootPath = rootPath
 				runtimeTest = {
 					enabled = true
@@ -31,7 +31,7 @@ Workflow {
 		}
 		language = StandardLanguage {
 			name = "iot.lua.xtext.IotLuaXtext"
-			fileExtensions = "iot"
+			fileExtensions = "iot_lua"
 			referencedResource = "platform:/resource/iot.model/model/iot.genmodel"
 			referencedResource = "platform:/resource/org.xtext.lua/model/generated/Lua.genmodel"
 			referencedResource = "platform:/resource/org.xtext.activitydiagram.model/model/activitydiagram.genmodel"

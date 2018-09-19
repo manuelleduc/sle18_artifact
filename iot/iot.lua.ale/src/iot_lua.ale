@@ -27,11 +27,16 @@ open class ExpressionBindStatement {
 	}
 }
 open class BooleanVariableBindStatement_Assignment {
+	override boolean value() {
+		(obj.currentValue as BooleanValue).value as Boolean
+	}
+	
 	override Value execute(Context c) {
 		val e = new Environment
-		c.inputValues.forEach [
-			e.putVariable(alg.$(it.variable).name(), it.value)
-		]
+		if (c !== null)
+			c.inputValues.forEach [
+				e.putVariable(alg.$(it.variable).name(), it.value)
+			]
 		(obj.eContainer as Activity).locals.forEach [
 			e.putVariable(alg.$(it).name(), it.currentValue)
 		]

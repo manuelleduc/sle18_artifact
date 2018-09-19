@@ -31,7 +31,6 @@ open class Expression_Multiplication {
  
 open class Statement_Block {
 	override void execute(Environment c) {
-		println('yolo')
 	} 
 }
 open class Expression_AccessArray {

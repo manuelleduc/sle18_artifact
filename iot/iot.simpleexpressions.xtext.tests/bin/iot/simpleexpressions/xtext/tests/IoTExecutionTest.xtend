@@ -11,6 +11,7 @@ import org.eclipse.emf.common.util.URI
 import org.eclipse.emf.ecore.resource.ResourceSet
 import org.eclipse.xtext.testing.InjectWith
 import org.eclipse.xtext.testing.XtextRunner
+import org.eclipse.xtext.testing.validation.ValidationTestHelper
 import org.junit.Test
 import org.junit.runner.RunWith
 
@@ -22,14 +23,14 @@ class IoTExecutionTest {
 
 	@Test
 	def void loadModel() {
- 
+
 		val rs = rsp.get
-		val r = rs.getResource(URI.createURI("usecase.iot"), true)
+		val r = rs.getResource(URI.createURI("usecase.iot_se"), true)
 		r.load(null)
 
 		val s = r.contents.head as System
 
-		val rev = new  Iot_simpleexpression_execRevisitor() {
+		val rev = new Iot_simpleexpression_execRevisitor() {
 		}
 		val o = rev.$(s.sketch.activity)
 		o.main()

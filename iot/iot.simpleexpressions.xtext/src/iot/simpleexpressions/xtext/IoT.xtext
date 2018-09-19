@@ -171,53 +171,42 @@ Print returns al::Print:
 
 Assign returns al::Assign:
 	name=ID '=' val=ASPlus;
-	
+
 IfStmt returns al::IfStmt:
 	'if' '(' test=EqualityTest ')' 'then'
-		ifBranch=Assign
+	ifBranch=Assign
 	('else'
-		elseBranch=Assign
-	)?
-	'end'
-;
+	elseBranch=Assign)?
+	'end';
 
 EqualityTest returns al::EqualityTest:
-	lhs=ASPlus '==' rhs=ASPlus
-;
-
+	lhs=ASPlus '==' rhs=ASPlus;
 
 ASPlus returns al::Arith:
-	ASMinus ({al::ArithPlus.lhs=current} '+' rhs=Arith)?
-;
+	ASMinus ({al::ArithPlus.lhs=current} '+' rhs=Arith)?;
 
 ASMinus returns al::Arith:
-	Arith ({al::ArithMinus.lhs=current} '-' rhs=Arith)?
-;
-
+	Arith ({al::ArithMinus.lhs=current} '-' rhs=Arith)?;
 
 Arith returns al::Arith:
-	ALLit | VarRef | Rand | Parenthesis
-;
+	ALLit | VarRef | Rand | Parenthesis;
 
 Parenthesis returns al::Arith:
-	'(' ASPlus ')'
-;
+	'(' ASPlus ')';
 
 ALLit returns al::Arith:
 	{al::ArithLit}
-	val=INTEGER
-;
+	val=INTEGER;
 
 VarRef returns al::Arith:
 	{al::ALVarRef}
-	name=ID
-;
+	name=ID;
 
 Rand returns al::RandRange:
-	'rand' '(' min=INTEGER ',' max=INTEGER ')'
-;
+	'rand' '(' min=INTEGER ',' max=INTEGER ')';
 
-terminal INTEGER returns ecore::EInt : '-'? INT ;
+terminal INTEGER returns ecore::EInt:
+	'-'? INT;
 
 IotActivity returns iot::IotActivity:
 	{iot_se::IoTActivityBindActivity}

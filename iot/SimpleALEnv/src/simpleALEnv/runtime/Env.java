@@ -7,7 +7,7 @@ public class Env {
 	Map<String, Integer> env = new HashMap<>();
 
 	public void bind(String s, Integer v) {
-		System.out.println("bind " + s + " to " + v);
+//		System.out.println("bind " + s + " to " + v);
 		env.put(s, v);
 	}
 

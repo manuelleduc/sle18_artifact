@@ -19,6 +19,11 @@ open class ExpressionBindSEExpression {
 
 
 open class BooleanVariableBindSEBooleanVariable {
+	
+	override boolean value() {
+		(alg.$(obj).execute(null) as BooleanValue).value
+	}
+	
 	override Value execute(Context c) {
 		ActivitydiagramFactory.eINSTANCE.createBooleanValue => [
 			value = alg.$(obj.delegate).execute() as Boolean
@@ -31,7 +36,7 @@ open class BooleanVariableBindSEBooleanVariable {
 	}
 	
 	override String print() {
-		'TODO'
+		obj.delegate.currentValue + ' / ' + obj.delegate.initialValue
 	}
 	override String name() {
 		obj.delegate.name
@@ -51,7 +56,7 @@ open class IntegerVariableBindSEIntegerVariable {
 	}
 	
 	override String print() {
-		'TODO'
+		obj.delegate.currentValue + ' / ' + obj.delegate.initialValue
 	}
 	override String name() {
 		obj.delegate.name
@@ -110,8 +115,12 @@ open class IdlStmtBindBlock {
 open class OpaqueAction {
 	override void execute(Context c) {
 		c.output.executedNodes.add(obj)
-		obj.expressions.filter[it instanceof ExpressionBindOperationDef].forEach[alg.$(it).execute(c)]
-		obj.expressions.filter[it instanceof ExpressionBindSEExpression].forEach [alg.$(it).execute(c)]
+		obj.expressions.filter[it instanceof ExpressionBindOperationDef].forEach[
+			alg.$(it).execute(c)
+		]
+		obj.expressions.filter[it instanceof ExpressionBindSEExpression].forEach [
+			alg.$(it).execute(c)
+		]
 		alg.$(obj).sendOffers(alg.$(obj).takeOfferdTokens)
 	}
 }

@@ -18507,41 +18507,47 @@ public class InternalIotLuaXtextParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleIntegerValue"
-    // InternalIotLuaXtext.g:6797:1: ruleIntegerValue returns [EObject current=null] : ( (lv_value_0_0= RULE_INT ) ) ;
+    // InternalIotLuaXtext.g:6797:1: ruleIntegerValue returns [EObject current=null] : ( (lv_value_0_0= ruleDouble ) ) ;
     public final EObject ruleIntegerValue() throws RecognitionException {
         EObject current = null;
 
-        Token lv_value_0_0=null;
+        AntlrDatatypeRuleToken lv_value_0_0 = null;
+
 
 
         	enterRule();
 
         try {
-            // InternalIotLuaXtext.g:6803:2: ( ( (lv_value_0_0= RULE_INT ) ) )
-            // InternalIotLuaXtext.g:6804:2: ( (lv_value_0_0= RULE_INT ) )
+            // InternalIotLuaXtext.g:6803:2: ( ( (lv_value_0_0= ruleDouble ) ) )
+            // InternalIotLuaXtext.g:6804:2: ( (lv_value_0_0= ruleDouble ) )
             {
-            // InternalIotLuaXtext.g:6804:2: ( (lv_value_0_0= RULE_INT ) )
-            // InternalIotLuaXtext.g:6805:3: (lv_value_0_0= RULE_INT )
+            // InternalIotLuaXtext.g:6804:2: ( (lv_value_0_0= ruleDouble ) )
+            // InternalIotLuaXtext.g:6805:3: (lv_value_0_0= ruleDouble )
             {
-            // InternalIotLuaXtext.g:6805:3: (lv_value_0_0= RULE_INT )
-            // InternalIotLuaXtext.g:6806:4: lv_value_0_0= RULE_INT
+            // InternalIotLuaXtext.g:6805:3: (lv_value_0_0= ruleDouble )
+            // InternalIotLuaXtext.g:6806:4: lv_value_0_0= ruleDouble
             {
-            lv_value_0_0=(Token)match(input,RULE_INT,FOLLOW_2); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
-              				newLeafNode(lv_value_0_0, grammarAccess.getIntegerValueAccess().getValueINTTerminalRuleCall_0());
+              				newCompositeNode(grammarAccess.getIntegerValueAccess().getValueDoubleParserRuleCall_0());
               			
             }
+            pushFollow(FOLLOW_2);
+            lv_value_0_0=ruleDouble();
+
+            state._fsp--;
+            if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
               				if (current==null) {
-              					current = createModelElement(grammarAccess.getIntegerValueRule());
+              					current = createModelElementForParent(grammarAccess.getIntegerValueRule());
               				}
-              				setWithLastConsumed(
+              				set(
               					current,
               					"value",
               					lv_value_0_0,
-              					"org.eclipse.xtext.common.Terminals.INT");
+              					"iot.lua.xtext.IotLuaXtext.Double");
+              				afterParserOrEnumRuleCall();
               			
             }
 
@@ -18572,7 +18578,7 @@ public class InternalIotLuaXtextParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleControlFlow"
-    // InternalIotLuaXtext.g:6825:1: entryRuleControlFlow returns [EObject current=null] : iv_ruleControlFlow= ruleControlFlow EOF ;
+    // InternalIotLuaXtext.g:6826:1: entryRuleControlFlow returns [EObject current=null] : iv_ruleControlFlow= ruleControlFlow EOF ;
     public final EObject entryRuleControlFlow() throws RecognitionException {
         EObject current = null;
 
@@ -18580,8 +18586,8 @@ public class InternalIotLuaXtextParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalIotLuaXtext.g:6825:52: (iv_ruleControlFlow= ruleControlFlow EOF )
-            // InternalIotLuaXtext.g:6826:2: iv_ruleControlFlow= ruleControlFlow EOF
+            // InternalIotLuaXtext.g:6826:52: (iv_ruleControlFlow= ruleControlFlow EOF )
+            // InternalIotLuaXtext.g:6827:2: iv_ruleControlFlow= ruleControlFlow EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getControlFlowRule()); 
@@ -18612,7 +18618,7 @@ public class InternalIotLuaXtextParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleControlFlow"
-    // InternalIotLuaXtext.g:6832:1: ruleControlFlow returns [EObject current=null] : (otherlv_0= 'flow' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= 'from' ( (otherlv_3= RULE_ID ) ) otherlv_4= 'to' ( (otherlv_5= RULE_ID ) ) (otherlv_6= '[' ( (otherlv_7= RULE_ID ) ) otherlv_8= ']' )? ) ;
+    // InternalIotLuaXtext.g:6833:1: ruleControlFlow returns [EObject current=null] : (otherlv_0= 'flow' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= 'from' ( (otherlv_3= RULE_ID ) ) otherlv_4= 'to' ( (otherlv_5= RULE_ID ) ) (otherlv_6= '[' ( (otherlv_7= RULE_ID ) ) otherlv_8= ']' )? ) ;
     public final EObject ruleControlFlow() throws RecognitionException {
         EObject current = null;
 
@@ -18630,11 +18636,11 @@ public class InternalIotLuaXtextParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalIotLuaXtext.g:6838:2: ( (otherlv_0= 'flow' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= 'from' ( (otherlv_3= RULE_ID ) ) otherlv_4= 'to' ( (otherlv_5= RULE_ID ) ) (otherlv_6= '[' ( (otherlv_7= RULE_ID ) ) otherlv_8= ']' )? ) )
-            // InternalIotLuaXtext.g:6839:2: (otherlv_0= 'flow' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= 'from' ( (otherlv_3= RULE_ID ) ) otherlv_4= 'to' ( (otherlv_5= RULE_ID ) ) (otherlv_6= '[' ( (otherlv_7= RULE_ID ) ) otherlv_8= ']' )? )
+            // InternalIotLuaXtext.g:6839:2: ( (otherlv_0= 'flow' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= 'from' ( (otherlv_3= RULE_ID ) ) otherlv_4= 'to' ( (otherlv_5= RULE_ID ) ) (otherlv_6= '[' ( (otherlv_7= RULE_ID ) ) otherlv_8= ']' )? ) )
+            // InternalIotLuaXtext.g:6840:2: (otherlv_0= 'flow' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= 'from' ( (otherlv_3= RULE_ID ) ) otherlv_4= 'to' ( (otherlv_5= RULE_ID ) ) (otherlv_6= '[' ( (otherlv_7= RULE_ID ) ) otherlv_8= ']' )? )
             {
-            // InternalIotLuaXtext.g:6839:2: (otherlv_0= 'flow' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= 'from' ( (otherlv_3= RULE_ID ) ) otherlv_4= 'to' ( (otherlv_5= RULE_ID ) ) (otherlv_6= '[' ( (otherlv_7= RULE_ID ) ) otherlv_8= ']' )? )
-            // InternalIotLuaXtext.g:6840:3: otherlv_0= 'flow' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= 'from' ( (otherlv_3= RULE_ID ) ) otherlv_4= 'to' ( (otherlv_5= RULE_ID ) ) (otherlv_6= '[' ( (otherlv_7= RULE_ID ) ) otherlv_8= ']' )?
+            // InternalIotLuaXtext.g:6840:2: (otherlv_0= 'flow' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= 'from' ( (otherlv_3= RULE_ID ) ) otherlv_4= 'to' ( (otherlv_5= RULE_ID ) ) (otherlv_6= '[' ( (otherlv_7= RULE_ID ) ) otherlv_8= ']' )? )
+            // InternalIotLuaXtext.g:6841:3: otherlv_0= 'flow' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= 'from' ( (otherlv_3= RULE_ID ) ) otherlv_4= 'to' ( (otherlv_5= RULE_ID ) ) (otherlv_6= '[' ( (otherlv_7= RULE_ID ) ) otherlv_8= ']' )?
             {
             otherlv_0=(Token)match(input,84,FOLLOW_3); if (state.failed) return current;
             if ( state.backtracking==0 ) {
@@ -18642,11 +18648,11 @@ public class InternalIotLuaXtextParser extends AbstractInternalAntlrParser {
               			newLeafNode(otherlv_0, grammarAccess.getControlFlowAccess().getFlowKeyword_0());
               		
             }
-            // InternalIotLuaXtext.g:6844:3: ( (lv_name_1_0= RULE_ID ) )
-            // InternalIotLuaXtext.g:6845:4: (lv_name_1_0= RULE_ID )
+            // InternalIotLuaXtext.g:6845:3: ( (lv_name_1_0= RULE_ID ) )
+            // InternalIotLuaXtext.g:6846:4: (lv_name_1_0= RULE_ID )
             {
-            // InternalIotLuaXtext.g:6845:4: (lv_name_1_0= RULE_ID )
-            // InternalIotLuaXtext.g:6846:5: lv_name_1_0= RULE_ID
+            // InternalIotLuaXtext.g:6846:4: (lv_name_1_0= RULE_ID )
+            // InternalIotLuaXtext.g:6847:5: lv_name_1_0= RULE_ID
             {
             lv_name_1_0=(Token)match(input,RULE_ID,FOLLOW_81); if (state.failed) return current;
             if ( state.backtracking==0 ) {
@@ -18678,11 +18684,11 @@ public class InternalIotLuaXtextParser extends AbstractInternalAntlrParser {
               			newLeafNode(otherlv_2, grammarAccess.getControlFlowAccess().getFromKeyword_2());
               		
             }
-            // InternalIotLuaXtext.g:6866:3: ( (otherlv_3= RULE_ID ) )
-            // InternalIotLuaXtext.g:6867:4: (otherlv_3= RULE_ID )
+            // InternalIotLuaXtext.g:6867:3: ( (otherlv_3= RULE_ID ) )
+            // InternalIotLuaXtext.g:6868:4: (otherlv_3= RULE_ID )
             {
-            // InternalIotLuaXtext.g:6867:4: (otherlv_3= RULE_ID )
-            // InternalIotLuaXtext.g:6868:5: otherlv_3= RULE_ID
+            // InternalIotLuaXtext.g:6868:4: (otherlv_3= RULE_ID )
+            // InternalIotLuaXtext.g:6869:5: otherlv_3= RULE_ID
             {
             if ( state.backtracking==0 ) {
 
@@ -18714,11 +18720,11 @@ public class InternalIotLuaXtextParser extends AbstractInternalAntlrParser {
               			newLeafNode(otherlv_4, grammarAccess.getControlFlowAccess().getToKeyword_4());
               		
             }
-            // InternalIotLuaXtext.g:6886:3: ( (otherlv_5= RULE_ID ) )
-            // InternalIotLuaXtext.g:6887:4: (otherlv_5= RULE_ID )
+            // InternalIotLuaXtext.g:6887:3: ( (otherlv_5= RULE_ID ) )
+            // InternalIotLuaXtext.g:6888:4: (otherlv_5= RULE_ID )
             {
-            // InternalIotLuaXtext.g:6887:4: (otherlv_5= RULE_ID )
-            // InternalIotLuaXtext.g:6888:5: otherlv_5= RULE_ID
+            // InternalIotLuaXtext.g:6888:4: (otherlv_5= RULE_ID )
+            // InternalIotLuaXtext.g:6889:5: otherlv_5= RULE_ID
             {
             if ( state.backtracking==0 ) {
 
@@ -18744,7 +18750,7 @@ public class InternalIotLuaXtextParser extends AbstractInternalAntlrParser {
 
             }
 
-            // InternalIotLuaXtext.g:6902:3: (otherlv_6= '[' ( (otherlv_7= RULE_ID ) ) otherlv_8= ']' )?
+            // InternalIotLuaXtext.g:6903:3: (otherlv_6= '[' ( (otherlv_7= RULE_ID ) ) otherlv_8= ']' )?
             int alt92=2;
             int LA92_0 = input.LA(1);
 
@@ -18753,7 +18759,7 @@ public class InternalIotLuaXtextParser extends AbstractInternalAntlrParser {
             }
             switch (alt92) {
                 case 1 :
-                    // InternalIotLuaXtext.g:6903:4: otherlv_6= '[' ( (otherlv_7= RULE_ID ) ) otherlv_8= ']'
+                    // InternalIotLuaXtext.g:6904:4: otherlv_6= '[' ( (otherlv_7= RULE_ID ) ) otherlv_8= ']'
                     {
                     otherlv_6=(Token)match(input,18,FOLLOW_3); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
@@ -18761,11 +18767,11 @@ public class InternalIotLuaXtextParser extends AbstractInternalAntlrParser {
                       				newLeafNode(otherlv_6, grammarAccess.getControlFlowAccess().getLeftSquareBracketKeyword_6_0());
                       			
                     }
-                    // InternalIotLuaXtext.g:6907:4: ( (otherlv_7= RULE_ID ) )
-                    // InternalIotLuaXtext.g:6908:5: (otherlv_7= RULE_ID )
+                    // InternalIotLuaXtext.g:6908:4: ( (otherlv_7= RULE_ID ) )
+                    // InternalIotLuaXtext.g:6909:5: (otherlv_7= RULE_ID )
                     {
-                    // InternalIotLuaXtext.g:6908:5: (otherlv_7= RULE_ID )
-                    // InternalIotLuaXtext.g:6909:6: otherlv_7= RULE_ID
+                    // InternalIotLuaXtext.g:6909:5: (otherlv_7= RULE_ID )
+                    // InternalIotLuaXtext.g:6910:6: otherlv_7= RULE_ID
                     {
                     if ( state.backtracking==0 ) {
 
@@ -18828,7 +18834,7 @@ public class InternalIotLuaXtextParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleDouble"
-    // InternalIotLuaXtext.g:6932:1: entryRuleDouble returns [String current=null] : iv_ruleDouble= ruleDouble EOF ;
+    // InternalIotLuaXtext.g:6933:1: entryRuleDouble returns [String current=null] : iv_ruleDouble= ruleDouble EOF ;
     public final String entryRuleDouble() throws RecognitionException {
         String current = null;
 
@@ -18836,8 +18842,8 @@ public class InternalIotLuaXtextParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalIotLuaXtext.g:6932:46: (iv_ruleDouble= ruleDouble EOF )
-            // InternalIotLuaXtext.g:6933:2: iv_ruleDouble= ruleDouble EOF
+            // InternalIotLuaXtext.g:6933:46: (iv_ruleDouble= ruleDouble EOF )
+            // InternalIotLuaXtext.g:6934:2: iv_ruleDouble= ruleDouble EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getDoubleRule()); 
@@ -18868,7 +18874,7 @@ public class InternalIotLuaXtextParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleDouble"
-    // InternalIotLuaXtext.g:6939:1: ruleDouble returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : (this_INT_0= RULE_INT (kw= '.' this_INT_2= RULE_INT )? ) ;
+    // InternalIotLuaXtext.g:6940:1: ruleDouble returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : (this_INT_0= RULE_INT (kw= '.' this_INT_2= RULE_INT )? ) ;
     public final AntlrDatatypeRuleToken ruleDouble() throws RecognitionException {
         AntlrDatatypeRuleToken current = new AntlrDatatypeRuleToken();
 
@@ -18880,11 +18886,11 @@ public class InternalIotLuaXtextParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalIotLuaXtext.g:6945:2: ( (this_INT_0= RULE_INT (kw= '.' this_INT_2= RULE_INT )? ) )
-            // InternalIotLuaXtext.g:6946:2: (this_INT_0= RULE_INT (kw= '.' this_INT_2= RULE_INT )? )
+            // InternalIotLuaXtext.g:6946:2: ( (this_INT_0= RULE_INT (kw= '.' this_INT_2= RULE_INT )? ) )
+            // InternalIotLuaXtext.g:6947:2: (this_INT_0= RULE_INT (kw= '.' this_INT_2= RULE_INT )? )
             {
-            // InternalIotLuaXtext.g:6946:2: (this_INT_0= RULE_INT (kw= '.' this_INT_2= RULE_INT )? )
-            // InternalIotLuaXtext.g:6947:3: this_INT_0= RULE_INT (kw= '.' this_INT_2= RULE_INT )?
+            // InternalIotLuaXtext.g:6947:2: (this_INT_0= RULE_INT (kw= '.' this_INT_2= RULE_INT )? )
+            // InternalIotLuaXtext.g:6948:3: this_INT_0= RULE_INT (kw= '.' this_INT_2= RULE_INT )?
             {
             this_INT_0=(Token)match(input,RULE_INT,FOLLOW_84); if (state.failed) return current;
             if ( state.backtracking==0 ) {
@@ -18897,7 +18903,7 @@ public class InternalIotLuaXtextParser extends AbstractInternalAntlrParser {
               			newLeafNode(this_INT_0, grammarAccess.getDoubleAccess().getINTTerminalRuleCall_0());
               		
             }
-            // InternalIotLuaXtext.g:6954:3: (kw= '.' this_INT_2= RULE_INT )?
+            // InternalIotLuaXtext.g:6955:3: (kw= '.' this_INT_2= RULE_INT )?
             int alt93=2;
             int LA93_0 = input.LA(1);
 
@@ -18906,7 +18912,7 @@ public class InternalIotLuaXtextParser extends AbstractInternalAntlrParser {
             }
             switch (alt93) {
                 case 1 :
-                    // InternalIotLuaXtext.g:6955:4: kw= '.' this_INT_2= RULE_INT
+                    // InternalIotLuaXtext.g:6956:4: kw= '.' this_INT_2= RULE_INT
                     {
                     kw=(Token)match(input,47,FOLLOW_85); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
@@ -18957,7 +18963,7 @@ public class InternalIotLuaXtextParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleBoardType"
-    // InternalIotLuaXtext.g:6972:1: ruleBoardType returns [Enumerator current=null] : ( (enumLiteral_0= 'RaspberryPi' ) | (enumLiteral_1= 'Arduino' ) | (enumLiteral_2= 'BeagleBoard' ) ) ;
+    // InternalIotLuaXtext.g:6973:1: ruleBoardType returns [Enumerator current=null] : ( (enumLiteral_0= 'RaspberryPi' ) | (enumLiteral_1= 'Arduino' ) | (enumLiteral_2= 'BeagleBoard' ) ) ;
     public final Enumerator ruleBoardType() throws RecognitionException {
         Enumerator current = null;
 
@@ -18969,10 +18975,10 @@ public class InternalIotLuaXtextParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalIotLuaXtext.g:6978:2: ( ( (enumLiteral_0= 'RaspberryPi' ) | (enumLiteral_1= 'Arduino' ) | (enumLiteral_2= 'BeagleBoard' ) ) )
-            // InternalIotLuaXtext.g:6979:2: ( (enumLiteral_0= 'RaspberryPi' ) | (enumLiteral_1= 'Arduino' ) | (enumLiteral_2= 'BeagleBoard' ) )
+            // InternalIotLuaXtext.g:6979:2: ( ( (enumLiteral_0= 'RaspberryPi' ) | (enumLiteral_1= 'Arduino' ) | (enumLiteral_2= 'BeagleBoard' ) ) )
+            // InternalIotLuaXtext.g:6980:2: ( (enumLiteral_0= 'RaspberryPi' ) | (enumLiteral_1= 'Arduino' ) | (enumLiteral_2= 'BeagleBoard' ) )
             {
-            // InternalIotLuaXtext.g:6979:2: ( (enumLiteral_0= 'RaspberryPi' ) | (enumLiteral_1= 'Arduino' ) | (enumLiteral_2= 'BeagleBoard' ) )
+            // InternalIotLuaXtext.g:6980:2: ( (enumLiteral_0= 'RaspberryPi' ) | (enumLiteral_1= 'Arduino' ) | (enumLiteral_2= 'BeagleBoard' ) )
             int alt94=3;
             switch ( input.LA(1) ) {
             case 87:
@@ -19000,10 +19006,10 @@ public class InternalIotLuaXtextParser extends AbstractInternalAntlrParser {
 
             switch (alt94) {
                 case 1 :
-                    // InternalIotLuaXtext.g:6980:3: (enumLiteral_0= 'RaspberryPi' )
+                    // InternalIotLuaXtext.g:6981:3: (enumLiteral_0= 'RaspberryPi' )
                     {
-                    // InternalIotLuaXtext.g:6980:3: (enumLiteral_0= 'RaspberryPi' )
-                    // InternalIotLuaXtext.g:6981:4: enumLiteral_0= 'RaspberryPi'
+                    // InternalIotLuaXtext.g:6981:3: (enumLiteral_0= 'RaspberryPi' )
+                    // InternalIotLuaXtext.g:6982:4: enumLiteral_0= 'RaspberryPi'
                     {
                     enumLiteral_0=(Token)match(input,87,FOLLOW_2); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
@@ -19019,10 +19025,10 @@ public class InternalIotLuaXtextParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // InternalIotLuaXtext.g:6988:3: (enumLiteral_1= 'Arduino' )
+                    // InternalIotLuaXtext.g:6989:3: (enumLiteral_1= 'Arduino' )
                     {
-                    // InternalIotLuaXtext.g:6988:3: (enumLiteral_1= 'Arduino' )
-                    // InternalIotLuaXtext.g:6989:4: enumLiteral_1= 'Arduino'
+                    // InternalIotLuaXtext.g:6989:3: (enumLiteral_1= 'Arduino' )
+                    // InternalIotLuaXtext.g:6990:4: enumLiteral_1= 'Arduino'
                     {
                     enumLiteral_1=(Token)match(input,88,FOLLOW_2); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
@@ -19038,10 +19044,10 @@ public class InternalIotLuaXtextParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 3 :
-                    // InternalIotLuaXtext.g:6996:3: (enumLiteral_2= 'BeagleBoard' )
+                    // InternalIotLuaXtext.g:6997:3: (enumLiteral_2= 'BeagleBoard' )
                     {
-                    // InternalIotLuaXtext.g:6996:3: (enumLiteral_2= 'BeagleBoard' )
-                    // InternalIotLuaXtext.g:6997:4: enumLiteral_2= 'BeagleBoard'
+                    // InternalIotLuaXtext.g:6997:3: (enumLiteral_2= 'BeagleBoard' )
+                    // InternalIotLuaXtext.g:6998:4: enumLiteral_2= 'BeagleBoard'
                     {
                     enumLiteral_2=(Token)match(input,89,FOLLOW_2); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
@@ -19081,7 +19087,7 @@ public class InternalIotLuaXtextParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleparam_attribute"
-    // InternalIotLuaXtext.g:7007:1: ruleparam_attribute returns [Enumerator current=null] : ( (enumLiteral_0= 'in' ) | (enumLiteral_1= 'out' ) | (enumLiteral_2= 'inout' ) ) ;
+    // InternalIotLuaXtext.g:7008:1: ruleparam_attribute returns [Enumerator current=null] : ( (enumLiteral_0= 'in' ) | (enumLiteral_1= 'out' ) | (enumLiteral_2= 'inout' ) ) ;
     public final Enumerator ruleparam_attribute() throws RecognitionException {
         Enumerator current = null;
 
@@ -19093,10 +19099,10 @@ public class InternalIotLuaXtextParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalIotLuaXtext.g:7013:2: ( ( (enumLiteral_0= 'in' ) | (enumLiteral_1= 'out' ) | (enumLiteral_2= 'inout' ) ) )
-            // InternalIotLuaXtext.g:7014:2: ( (enumLiteral_0= 'in' ) | (enumLiteral_1= 'out' ) | (enumLiteral_2= 'inout' ) )
+            // InternalIotLuaXtext.g:7014:2: ( ( (enumLiteral_0= 'in' ) | (enumLiteral_1= 'out' ) | (enumLiteral_2= 'inout' ) ) )
+            // InternalIotLuaXtext.g:7015:2: ( (enumLiteral_0= 'in' ) | (enumLiteral_1= 'out' ) | (enumLiteral_2= 'inout' ) )
             {
-            // InternalIotLuaXtext.g:7014:2: ( (enumLiteral_0= 'in' ) | (enumLiteral_1= 'out' ) | (enumLiteral_2= 'inout' ) )
+            // InternalIotLuaXtext.g:7015:2: ( (enumLiteral_0= 'in' ) | (enumLiteral_1= 'out' ) | (enumLiteral_2= 'inout' ) )
             int alt95=3;
             switch ( input.LA(1) ) {
             case 45:
@@ -19124,10 +19130,10 @@ public class InternalIotLuaXtextParser extends AbstractInternalAntlrParser {
 
             switch (alt95) {
                 case 1 :
-                    // InternalIotLuaXtext.g:7015:3: (enumLiteral_0= 'in' )
+                    // InternalIotLuaXtext.g:7016:3: (enumLiteral_0= 'in' )
                     {
-                    // InternalIotLuaXtext.g:7015:3: (enumLiteral_0= 'in' )
-                    // InternalIotLuaXtext.g:7016:4: enumLiteral_0= 'in'
+                    // InternalIotLuaXtext.g:7016:3: (enumLiteral_0= 'in' )
+                    // InternalIotLuaXtext.g:7017:4: enumLiteral_0= 'in'
                     {
                     enumLiteral_0=(Token)match(input,45,FOLLOW_2); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
@@ -19143,10 +19149,10 @@ public class InternalIotLuaXtextParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // InternalIotLuaXtext.g:7023:3: (enumLiteral_1= 'out' )
+                    // InternalIotLuaXtext.g:7024:3: (enumLiteral_1= 'out' )
                     {
-                    // InternalIotLuaXtext.g:7023:3: (enumLiteral_1= 'out' )
-                    // InternalIotLuaXtext.g:7024:4: enumLiteral_1= 'out'
+                    // InternalIotLuaXtext.g:7024:3: (enumLiteral_1= 'out' )
+                    // InternalIotLuaXtext.g:7025:4: enumLiteral_1= 'out'
                     {
                     enumLiteral_1=(Token)match(input,74,FOLLOW_2); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
@@ -19162,10 +19168,10 @@ public class InternalIotLuaXtextParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 3 :
-                    // InternalIotLuaXtext.g:7031:3: (enumLiteral_2= 'inout' )
+                    // InternalIotLuaXtext.g:7032:3: (enumLiteral_2= 'inout' )
                     {
-                    // InternalIotLuaXtext.g:7031:3: (enumLiteral_2= 'inout' )
-                    // InternalIotLuaXtext.g:7032:4: enumLiteral_2= 'inout'
+                    // InternalIotLuaXtext.g:7032:3: (enumLiteral_2= 'inout' )
+                    // InternalIotLuaXtext.g:7033:4: enumLiteral_2= 'inout'
                     {
                     enumLiteral_2=(Token)match(input,90,FOLLOW_2); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
@@ -19205,7 +19211,7 @@ public class InternalIotLuaXtextParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "rulefloat_type"
-    // InternalIotLuaXtext.g:7042:1: rulefloat_type returns [Enumerator current=null] : (enumLiteral_0= 'float' ) ;
+    // InternalIotLuaXtext.g:7043:1: rulefloat_type returns [Enumerator current=null] : (enumLiteral_0= 'float' ) ;
     public final Enumerator rulefloat_type() throws RecognitionException {
         Enumerator current = null;
 
@@ -19215,11 +19221,11 @@ public class InternalIotLuaXtextParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalIotLuaXtext.g:7048:2: ( (enumLiteral_0= 'float' ) )
-            // InternalIotLuaXtext.g:7049:2: (enumLiteral_0= 'float' )
+            // InternalIotLuaXtext.g:7049:2: ( (enumLiteral_0= 'float' ) )
+            // InternalIotLuaXtext.g:7050:2: (enumLiteral_0= 'float' )
             {
-            // InternalIotLuaXtext.g:7049:2: (enumLiteral_0= 'float' )
-            // InternalIotLuaXtext.g:7050:3: enumLiteral_0= 'float'
+            // InternalIotLuaXtext.g:7050:2: (enumLiteral_0= 'float' )
+            // InternalIotLuaXtext.g:7051:3: enumLiteral_0= 'float'
             {
             enumLiteral_0=(Token)match(input,91,FOLLOW_2); if (state.failed) return current;
             if ( state.backtracking==0 ) {
@@ -19253,7 +19259,7 @@ public class InternalIotLuaXtextParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruledouble_type"
-    // InternalIotLuaXtext.g:7059:1: ruledouble_type returns [Enumerator current=null] : (enumLiteral_0= 'double' ) ;
+    // InternalIotLuaXtext.g:7060:1: ruledouble_type returns [Enumerator current=null] : (enumLiteral_0= 'double' ) ;
     public final Enumerator ruledouble_type() throws RecognitionException {
         Enumerator current = null;
 
@@ -19263,11 +19269,11 @@ public class InternalIotLuaXtextParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalIotLuaXtext.g:7065:2: ( (enumLiteral_0= 'double' ) )
-            // InternalIotLuaXtext.g:7066:2: (enumLiteral_0= 'double' )
+            // InternalIotLuaXtext.g:7066:2: ( (enumLiteral_0= 'double' ) )
+            // InternalIotLuaXtext.g:7067:2: (enumLiteral_0= 'double' )
             {
-            // InternalIotLuaXtext.g:7066:2: (enumLiteral_0= 'double' )
-            // InternalIotLuaXtext.g:7067:3: enumLiteral_0= 'double'
+            // InternalIotLuaXtext.g:7067:2: (enumLiteral_0= 'double' )
+            // InternalIotLuaXtext.g:7068:3: enumLiteral_0= 'double'
             {
             enumLiteral_0=(Token)match(input,28,FOLLOW_2); if (state.failed) return current;
             if ( state.backtracking==0 ) {
@@ -19301,7 +19307,7 @@ public class InternalIotLuaXtextParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleshort_type"
-    // InternalIotLuaXtext.g:7076:1: ruleshort_type returns [Enumerator current=null] : (enumLiteral_0= 'short' ) ;
+    // InternalIotLuaXtext.g:7077:1: ruleshort_type returns [Enumerator current=null] : (enumLiteral_0= 'short' ) ;
     public final Enumerator ruleshort_type() throws RecognitionException {
         Enumerator current = null;
 
@@ -19311,11 +19317,11 @@ public class InternalIotLuaXtextParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalIotLuaXtext.g:7082:2: ( (enumLiteral_0= 'short' ) )
-            // InternalIotLuaXtext.g:7083:2: (enumLiteral_0= 'short' )
+            // InternalIotLuaXtext.g:7083:2: ( (enumLiteral_0= 'short' ) )
+            // InternalIotLuaXtext.g:7084:2: (enumLiteral_0= 'short' )
             {
-            // InternalIotLuaXtext.g:7083:2: (enumLiteral_0= 'short' )
-            // InternalIotLuaXtext.g:7084:3: enumLiteral_0= 'short'
+            // InternalIotLuaXtext.g:7084:2: (enumLiteral_0= 'short' )
+            // InternalIotLuaXtext.g:7085:3: enumLiteral_0= 'short'
             {
             enumLiteral_0=(Token)match(input,30,FOLLOW_2); if (state.failed) return current;
             if ( state.backtracking==0 ) {
@@ -19349,7 +19355,7 @@ public class InternalIotLuaXtextParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "rulelong_type"
-    // InternalIotLuaXtext.g:7093:1: rulelong_type returns [Enumerator current=null] : (enumLiteral_0= 'long' ) ;
+    // InternalIotLuaXtext.g:7094:1: rulelong_type returns [Enumerator current=null] : (enumLiteral_0= 'long' ) ;
     public final Enumerator rulelong_type() throws RecognitionException {
         Enumerator current = null;
 
@@ -19359,11 +19365,11 @@ public class InternalIotLuaXtextParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalIotLuaXtext.g:7099:2: ( (enumLiteral_0= 'long' ) )
-            // InternalIotLuaXtext.g:7100:2: (enumLiteral_0= 'long' )
+            // InternalIotLuaXtext.g:7100:2: ( (enumLiteral_0= 'long' ) )
+            // InternalIotLuaXtext.g:7101:2: (enumLiteral_0= 'long' )
             {
-            // InternalIotLuaXtext.g:7100:2: (enumLiteral_0= 'long' )
-            // InternalIotLuaXtext.g:7101:3: enumLiteral_0= 'long'
+            // InternalIotLuaXtext.g:7101:2: (enumLiteral_0= 'long' )
+            // InternalIotLuaXtext.g:7102:3: enumLiteral_0= 'long'
             {
             enumLiteral_0=(Token)match(input,27,FOLLOW_2); if (state.failed) return current;
             if ( state.backtracking==0 ) {
@@ -19397,7 +19403,7 @@ public class InternalIotLuaXtextParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "rulechar_type"
-    // InternalIotLuaXtext.g:7110:1: rulechar_type returns [Enumerator current=null] : (enumLiteral_0= 'char' ) ;
+    // InternalIotLuaXtext.g:7111:1: rulechar_type returns [Enumerator current=null] : (enumLiteral_0= 'char' ) ;
     public final Enumerator rulechar_type() throws RecognitionException {
         Enumerator current = null;
 
@@ -19407,11 +19413,11 @@ public class InternalIotLuaXtextParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalIotLuaXtext.g:7116:2: ( (enumLiteral_0= 'char' ) )
-            // InternalIotLuaXtext.g:7117:2: (enumLiteral_0= 'char' )
+            // InternalIotLuaXtext.g:7117:2: ( (enumLiteral_0= 'char' ) )
+            // InternalIotLuaXtext.g:7118:2: (enumLiteral_0= 'char' )
             {
-            // InternalIotLuaXtext.g:7117:2: (enumLiteral_0= 'char' )
-            // InternalIotLuaXtext.g:7118:3: enumLiteral_0= 'char'
+            // InternalIotLuaXtext.g:7118:2: (enumLiteral_0= 'char' )
+            // InternalIotLuaXtext.g:7119:3: enumLiteral_0= 'char'
             {
             enumLiteral_0=(Token)match(input,92,FOLLOW_2); if (state.failed) return current;
             if ( state.backtracking==0 ) {
@@ -19445,7 +19451,7 @@ public class InternalIotLuaXtextParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "rulewide_char_type"
-    // InternalIotLuaXtext.g:7127:1: rulewide_char_type returns [Enumerator current=null] : (enumLiteral_0= 'wchar' ) ;
+    // InternalIotLuaXtext.g:7128:1: rulewide_char_type returns [Enumerator current=null] : (enumLiteral_0= 'wchar' ) ;
     public final Enumerator rulewide_char_type() throws RecognitionException {
         Enumerator current = null;
 
@@ -19455,11 +19461,11 @@ public class InternalIotLuaXtextParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalIotLuaXtext.g:7133:2: ( (enumLiteral_0= 'wchar' ) )
-            // InternalIotLuaXtext.g:7134:2: (enumLiteral_0= 'wchar' )
+            // InternalIotLuaXtext.g:7134:2: ( (enumLiteral_0= 'wchar' ) )
+            // InternalIotLuaXtext.g:7135:2: (enumLiteral_0= 'wchar' )
             {
-            // InternalIotLuaXtext.g:7134:2: (enumLiteral_0= 'wchar' )
-            // InternalIotLuaXtext.g:7135:3: enumLiteral_0= 'wchar'
+            // InternalIotLuaXtext.g:7135:2: (enumLiteral_0= 'wchar' )
+            // InternalIotLuaXtext.g:7136:3: enumLiteral_0= 'wchar'
             {
             enumLiteral_0=(Token)match(input,93,FOLLOW_2); if (state.failed) return current;
             if ( state.backtracking==0 ) {
@@ -19493,7 +19499,7 @@ public class InternalIotLuaXtextParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "rulestring_type"
-    // InternalIotLuaXtext.g:7144:1: rulestring_type returns [Enumerator current=null] : (enumLiteral_0= 'string' ) ;
+    // InternalIotLuaXtext.g:7145:1: rulestring_type returns [Enumerator current=null] : (enumLiteral_0= 'string' ) ;
     public final Enumerator rulestring_type() throws RecognitionException {
         Enumerator current = null;
 
@@ -19503,11 +19509,11 @@ public class InternalIotLuaXtextParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalIotLuaXtext.g:7150:2: ( (enumLiteral_0= 'string' ) )
-            // InternalIotLuaXtext.g:7151:2: (enumLiteral_0= 'string' )
+            // InternalIotLuaXtext.g:7151:2: ( (enumLiteral_0= 'string' ) )
+            // InternalIotLuaXtext.g:7152:2: (enumLiteral_0= 'string' )
             {
-            // InternalIotLuaXtext.g:7151:2: (enumLiteral_0= 'string' )
-            // InternalIotLuaXtext.g:7152:3: enumLiteral_0= 'string'
+            // InternalIotLuaXtext.g:7152:2: (enumLiteral_0= 'string' )
+            // InternalIotLuaXtext.g:7153:3: enumLiteral_0= 'string'
             {
             enumLiteral_0=(Token)match(input,94,FOLLOW_2); if (state.failed) return current;
             if ( state.backtracking==0 ) {
@@ -19541,7 +19547,7 @@ public class InternalIotLuaXtextParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "rulewide_string_type"
-    // InternalIotLuaXtext.g:7161:1: rulewide_string_type returns [Enumerator current=null] : (enumLiteral_0= 'wstring' ) ;
+    // InternalIotLuaXtext.g:7162:1: rulewide_string_type returns [Enumerator current=null] : (enumLiteral_0= 'wstring' ) ;
     public final Enumerator rulewide_string_type() throws RecognitionException {
         Enumerator current = null;
 
@@ -19551,11 +19557,11 @@ public class InternalIotLuaXtextParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalIotLuaXtext.g:7167:2: ( (enumLiteral_0= 'wstring' ) )
-            // InternalIotLuaXtext.g:7168:2: (enumLiteral_0= 'wstring' )
+            // InternalIotLuaXtext.g:7168:2: ( (enumLiteral_0= 'wstring' ) )
+            // InternalIotLuaXtext.g:7169:2: (enumLiteral_0= 'wstring' )
             {
-            // InternalIotLuaXtext.g:7168:2: (enumLiteral_0= 'wstring' )
-            // InternalIotLuaXtext.g:7169:3: enumLiteral_0= 'wstring'
+            // InternalIotLuaXtext.g:7169:2: (enumLiteral_0= 'wstring' )
+            // InternalIotLuaXtext.g:7170:3: enumLiteral_0= 'wstring'
             {
             enumLiteral_0=(Token)match(input,95,FOLLOW_2); if (state.failed) return current;
             if ( state.backtracking==0 ) {
@@ -19589,7 +19595,7 @@ public class InternalIotLuaXtextParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleboolean_type"
-    // InternalIotLuaXtext.g:7178:1: ruleboolean_type returns [Enumerator current=null] : (enumLiteral_0= 'boolean' ) ;
+    // InternalIotLuaXtext.g:7179:1: ruleboolean_type returns [Enumerator current=null] : (enumLiteral_0= 'boolean' ) ;
     public final Enumerator ruleboolean_type() throws RecognitionException {
         Enumerator current = null;
 
@@ -19599,11 +19605,11 @@ public class InternalIotLuaXtextParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalIotLuaXtext.g:7184:2: ( (enumLiteral_0= 'boolean' ) )
-            // InternalIotLuaXtext.g:7185:2: (enumLiteral_0= 'boolean' )
+            // InternalIotLuaXtext.g:7185:2: ( (enumLiteral_0= 'boolean' ) )
+            // InternalIotLuaXtext.g:7186:2: (enumLiteral_0= 'boolean' )
             {
-            // InternalIotLuaXtext.g:7185:2: (enumLiteral_0= 'boolean' )
-            // InternalIotLuaXtext.g:7186:3: enumLiteral_0= 'boolean'
+            // InternalIotLuaXtext.g:7186:2: (enumLiteral_0= 'boolean' )
+            // InternalIotLuaXtext.g:7187:3: enumLiteral_0= 'boolean'
             {
             enumLiteral_0=(Token)match(input,96,FOLLOW_2); if (state.failed) return current;
             if ( state.backtracking==0 ) {
@@ -19637,7 +19643,7 @@ public class InternalIotLuaXtextParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleoctet_type"
-    // InternalIotLuaXtext.g:7195:1: ruleoctet_type returns [Enumerator current=null] : (enumLiteral_0= 'octet' ) ;
+    // InternalIotLuaXtext.g:7196:1: ruleoctet_type returns [Enumerator current=null] : (enumLiteral_0= 'octet' ) ;
     public final Enumerator ruleoctet_type() throws RecognitionException {
         Enumerator current = null;
 
@@ -19647,11 +19653,11 @@ public class InternalIotLuaXtextParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalIotLuaXtext.g:7201:2: ( (enumLiteral_0= 'octet' ) )
-            // InternalIotLuaXtext.g:7202:2: (enumLiteral_0= 'octet' )
+            // InternalIotLuaXtext.g:7202:2: ( (enumLiteral_0= 'octet' ) )
+            // InternalIotLuaXtext.g:7203:2: (enumLiteral_0= 'octet' )
             {
-            // InternalIotLuaXtext.g:7202:2: (enumLiteral_0= 'octet' )
-            // InternalIotLuaXtext.g:7203:3: enumLiteral_0= 'octet'
+            // InternalIotLuaXtext.g:7203:2: (enumLiteral_0= 'octet' )
+            // InternalIotLuaXtext.g:7204:3: enumLiteral_0= 'octet'
             {
             enumLiteral_0=(Token)match(input,97,FOLLOW_2); if (state.failed) return current;
             if ( state.backtracking==0 ) {
@@ -19685,7 +19691,7 @@ public class InternalIotLuaXtextParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleany_type"
-    // InternalIotLuaXtext.g:7212:1: ruleany_type returns [Enumerator current=null] : (enumLiteral_0= 'any' ) ;
+    // InternalIotLuaXtext.g:7213:1: ruleany_type returns [Enumerator current=null] : (enumLiteral_0= 'any' ) ;
     public final Enumerator ruleany_type() throws RecognitionException {
         Enumerator current = null;
 
@@ -19695,11 +19701,11 @@ public class InternalIotLuaXtextParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalIotLuaXtext.g:7218:2: ( (enumLiteral_0= 'any' ) )
-            // InternalIotLuaXtext.g:7219:2: (enumLiteral_0= 'any' )
+            // InternalIotLuaXtext.g:7219:2: ( (enumLiteral_0= 'any' ) )
+            // InternalIotLuaXtext.g:7220:2: (enumLiteral_0= 'any' )
             {
-            // InternalIotLuaXtext.g:7219:2: (enumLiteral_0= 'any' )
-            // InternalIotLuaXtext.g:7220:3: enumLiteral_0= 'any'
+            // InternalIotLuaXtext.g:7220:2: (enumLiteral_0= 'any' )
+            // InternalIotLuaXtext.g:7221:3: enumLiteral_0= 'any'
             {
             enumLiteral_0=(Token)match(input,98,FOLLOW_2); if (state.failed) return current;
             if ( state.backtracking==0 ) {

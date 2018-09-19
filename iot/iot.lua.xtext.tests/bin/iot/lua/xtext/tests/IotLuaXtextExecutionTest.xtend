@@ -25,7 +25,7 @@ class IotLuaXtextExecutionTest {
 	def void loadModel() {
 
 		val rs = rsp.get
-		val r = rs.getResource(URI.createURI("usecase.iot"), true)
+		val r = rs.getResource(URI.createURI("usecase.iot_lua"), true)
 		r.load(null)
 
 		val s = r.contents.head as System

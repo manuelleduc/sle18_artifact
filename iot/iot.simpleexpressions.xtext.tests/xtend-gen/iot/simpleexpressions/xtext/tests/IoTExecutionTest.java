@@ -30,7 +30,7 @@ public class IoTExecutionTest {
   public void loadModel() {
     try {
       final ResourceSet rs = this.rsp.get();
-      final Resource r = rs.getResource(URI.createURI("usecase.iot"), true);
+      final Resource r = rs.getResource(URI.createURI("usecase.iot_se"), true);
       r.load(null);
       EObject _head = IterableExtensions.<EObject>head(r.getContents());
       final iot.System s = ((iot.System) _head);

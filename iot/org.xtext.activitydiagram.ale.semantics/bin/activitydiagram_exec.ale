@@ -39,8 +39,9 @@ open class DecisionNode {
 	}
 	override void sendOffers(List<Token> tokens) {
 		for (ActivityEdge edge : obj.outgoing) {
+//			if(edge instanceof ControlFlow) println(edge.guard)
 			if (edge instanceof ControlFlow && ( edge as ControlFlow).guard !== null) {
-				if ((( edge as ControlFlow).guard.currentValue as BooleanValue).value) {
+				if (alg.$(( edge as ControlFlow).guard).value) {
 					alg.$(edge).sendOffer(tokens);
 				}
 			}
@@ -125,7 +126,9 @@ open class ActivityNode {
 		return obj.isRunning
 	}
 	def void sendOffers(List<Token> tokens) {
-		obj.outgoing.forEach[alg.$(it).sendOffer(tokens)]
+		obj.outgoing.forEach[
+			alg.$(it).sendOffer(tokens)
+		]
 	}
 	def List<Token> takeOfferdTokens() {
 		val allTokens = newArrayList
@@ -160,7 +163,9 @@ open class ActivityNode {
 	}
 }
 open class Activity {
+	
 	def void main(List<InputValue> value) {
+		
 		val c = ActivitydiagramFactory.eINSTANCE.createContext
 		c.inputValues += value
 		c.activity = obj
@@ -175,7 +180,9 @@ open class Activity {
 	def void execute(Context c) {
 		obj.locals.forEach[v|alg.$(v).init(c)]
 		alg.$(obj.nodes.filter[node|node instanceof InitialNode].get(0)).execute(c)
-		var list = obj.nodes.filter[node|alg.$(node).hasOffers]
+		var list = obj.nodes.filter[node|
+			alg.$(node).hasOffers
+		]
 		while (list !== null && list.size > 0) {
 			val exec = list.head
 			alg.$(exec).execute(c)
@@ -323,4 +330,6 @@ open class IntegerValue {
 	}
 }
 open class IntegerVariable {}
-open class BooleanVariable {}
+open abstract class BooleanVariable {
+	abstract def boolean value()
+}

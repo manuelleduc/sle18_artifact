@@ -60593,24 +60593,28 @@ public class InternalIotLuaXtextParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__IntegerValue__ValueAssignment"
-    // InternalIotLuaXtext.g:19021:1: rule__IntegerValue__ValueAssignment : ( RULE_INT ) ;
+    // InternalIotLuaXtext.g:19021:1: rule__IntegerValue__ValueAssignment : ( ruleDouble ) ;
     public final void rule__IntegerValue__ValueAssignment() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalIotLuaXtext.g:19025:1: ( ( RULE_INT ) )
-            // InternalIotLuaXtext.g:19026:2: ( RULE_INT )
+            // InternalIotLuaXtext.g:19025:1: ( ( ruleDouble ) )
+            // InternalIotLuaXtext.g:19026:2: ( ruleDouble )
             {
-            // InternalIotLuaXtext.g:19026:2: ( RULE_INT )
-            // InternalIotLuaXtext.g:19027:3: RULE_INT
+            // InternalIotLuaXtext.g:19026:2: ( ruleDouble )
+            // InternalIotLuaXtext.g:19027:3: ruleDouble
             {
             if ( state.backtracking==0 ) {
-               before(grammarAccess.getIntegerValueAccess().getValueINTTerminalRuleCall_0()); 
+               before(grammarAccess.getIntegerValueAccess().getValueDoubleParserRuleCall_0()); 
             }
-            match(input,RULE_INT,FOLLOW_2); if (state.failed) return ;
+            pushFollow(FOLLOW_2);
+            ruleDouble();
+
+            state._fsp--;
+            if (state.failed) return ;
             if ( state.backtracking==0 ) {
-               after(grammarAccess.getIntegerValueAccess().getValueINTTerminalRuleCall_0()); 
+               after(grammarAccess.getIntegerValueAccess().getValueDoubleParserRuleCall_0()); 
             }
 
             }
