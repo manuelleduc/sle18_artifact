@@ -6,6 +6,10 @@ Manuel Leduc, Thomas Degueule and Benoit Combemale
 
 Please find in the [answer file](./answer.md) the comments regarding the kick the tires observations.
 
+## Development note
+
+Further devepments of the technologies presented in this artifact will take place at https://github.com/diverse-project/alex.
+
 ## Introduction
 
 The Revisitor pattern is a language implementation pattern that enables independent extensibility of the syntax and  semantics of metamodel-based DSLs, with incremental compilation and without anticipation. It is inspired by the Object Algebra design pattern and adapted to the specificities of metamodeling.
